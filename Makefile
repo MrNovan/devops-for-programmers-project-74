@@ -1,17 +1,17 @@
 dev:
-	@docker-compose up
+	docker-compose up
 
 ci:
-	@docker-compose -f docker-compose.yml -f docker-compose.test.yml up --abort-on-container-exit --exit-code-from app
+	docker-compose -f docker-compose.yml -f docker-compose.test.yml up --abort-on-container-exit --exit-code-from app
 
 build:
-	@docker-compose build
+	docker-compose build
 
 test-build:
-	@docker-compose -f docker-compose.yml -f docker-compose.test.yml build
+	docker-compose -f docker-compose.yml -f docker-compose.test.yml build
 
 push:
-	@docker-compose push
+	docker-compose push
 
 clean:
-	@docker-compose down
+	docker-compose down
