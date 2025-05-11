@@ -4,8 +4,7 @@ dev:
 test:
     docker-compose -f docker-compose.yml -f docker-compose.test.yml up --abort-on-container-exit --exit-code-from app
 
-ci: 
-    test
+ci: test
 
 build:
     docker-compose build
