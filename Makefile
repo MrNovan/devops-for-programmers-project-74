@@ -1,10 +1,8 @@
 dev:
 	@docker-compose up
 
-test:
-	@docker-compose -f docker-compose.yml -f docker-compose.test.yml up --abort-on-container-exit --exit-code-from app
-
-ci: test
+ci:
+    @docker-compose -f docker-compose.yml -f docker-compose.test.yml up --abort-on-container-exit --exit-code-from app
 
 build:
 	@docker-compose build
