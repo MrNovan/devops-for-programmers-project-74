@@ -21,7 +21,7 @@ jobs:
       - name: Install dependencies
         run: docker compose -f docker-compose.yml run --rm app make setup
 
-      - name: Run tests
+      - name: tests
         run: docker compose -f docker-compose.yml up --abort-on-container-exit
 
       - name: Build production image
